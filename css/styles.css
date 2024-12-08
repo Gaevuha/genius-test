@@ -63,7 +63,8 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 ul {
-
+    margin: 0;
+    padding: 0;
     list-style-type: none; /*убирає маркування списку*/
 }
 
@@ -122,9 +123,33 @@ ul {
 
 .link:hover {
     color: var(--color-brand-light);
-    font-weight: 600;
+    /* font-weight: 600; */
 }
 
+/* Header */
+
+.header {
+ background-color: lightgray;
+}
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    gap: 40px;
+}
+
+.haeder-menu {
+    display: flex;
+    gap: 64px;
+    flex-grow: 1;
+    justify-content: center;
+}
 /* hero-section */
 .hero-section {
     padding: 272px 0;
@@ -142,14 +167,20 @@ ul {
 }
 
 /* advantages section */
-.advantages-list {
-    color: var(--color-primeri-light);
+.advantages-section {
+    padding: 16px 0;
     background: var(--color-brand-light);
+}
+.advantages-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
 }
 
 .advantages-item {
     font-size: 20px;
     font-weight: 300;
+    color: var(--color-primeri-light);
 }
 .section-title {
     font-size: 64px;
@@ -161,6 +192,16 @@ ul {
     color: var(--color-brand-dark);
 } 
 /* taditions-section */
+
+.traditions-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.traditions-content {
+    max-width: 710px;
+}
 .traditions-section {
     padding-top: 96px;
 }
@@ -178,6 +219,9 @@ ul {
     color: var(--color-brand-light);
 }
 
+.traditions-text.limited {
+    max-width: 335px;
+}
 /* chef section */
 
 .chefs-section-title {
@@ -192,17 +236,33 @@ ul {
 
 /* formats section */
 
+.formats-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.formats-item {
+    flex-basis: calc((100% - 40px) / 3);
+}
+
+.formats-card {
+    padding: 24px;
+    border: 1px solid lightgrey; /* remove */
+    border-radius: 16px;
+}
+
 .formats-section-title {
     margin-bottom: 80px;
 }
 
-.format-title {
+.formats-title {
     font-size: 24px;
     font-weight: 600;
 
 }
 
-.format-text {
+.formats-text {
     font-size: 14px;
     font-weight: 300;
 }

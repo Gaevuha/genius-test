@@ -1,7 +1,14 @@
-.box {
-    display: inline-block;
+* {
     box-sizing: border-box;
-    width: 100px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+
+.item{
+    flex-basis: 100px;
     height: 100px;
     background-color: blueviolet;
     padding: 10px;
@@ -9,6 +16,14 @@
     margin: 10px;
 }
 
-.box:nth-child(n + 3) {
-    background-color: gold;
+.item:nth-child(2) {
+    order: 4;
+    flex-basis: 50px;
+    height: 50px;
+    align-self:flex-end;
+}
+
+.item:nth-child(4) {
+    flex-basis: 80px;
+    height: 80px;
 }
