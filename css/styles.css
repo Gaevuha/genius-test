@@ -48,6 +48,7 @@
 
 body {
     color: var(--color-primeri-dark);
+    background-color: var(--color-primeri-light);
     font-family: "Poppins", sans-serif;
     font-size: 18px;
     font-weight: 400;
@@ -254,7 +255,7 @@ ul {
 }
 .chef-foto {
     border-radius: 4px 4px 4px 200px;
-    box-shadow: -16px 16px 0 0 white, -16px 16px 0 2px var(--color-secondary-dark); 
+    box-shadow: -16px 16px 0 0 var(--color-primeri-light), -16px 16px 0 2px var(--color-secondary-dark); 
 }
 
 /* formats section */
@@ -292,6 +293,26 @@ ul {
     font-weight: 300;
 }
 
+/* carousel */
+
+.carousel-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0%;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid var(--color-primeri-dark);
+}
+
+.carousel-button:hover {
+    background-color: var(--color-primeri-dark);
+     fill: var(--color-primeri-light);
+}
+
+/* contact */
 .contact-title {
     margin-bottom: 16px;
 }
@@ -315,6 +336,14 @@ ul {
 
 .address-link:hover {
     color: var(--color-brand-normal)
+}
+
+.address-icon {
+    fill: var(--color-primeri-light);
+}
+
+.address-icon:hover {
+    fill: var(--color-brand-normal)
 }
 
 .address-copyright {
