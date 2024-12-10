@@ -42,7 +42,9 @@
 }
 
 /* base */
-* {
+*,
+*::after,
+*::before {
     box-sizing: border-box; /* контент та падінги додаються всередині бордера*/
 }
 
@@ -59,6 +61,10 @@ body {
 
 h1, h2, h3, h4, h5, h6, p {
     margin-top: 0;
+}
+
+a {
+    display: inline-block;
 }
 
 .address {
@@ -247,18 +253,44 @@ ul {
     border: 2px solid var(--color-brand-light);
     content: '';
 }
+.chefs-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 30px;
+    }
+
+    .chefs-item {
+        flex-basis: calc((100% - 30px) / 2);
+    }
+    .chef-card {
+        display: flex;
+        gap: 30px;
+    }
 
 .chef-title {
     margin-bottom: 16px;
     font-size: 40px;
     font-weight: 600;
 }
+.chef-text p {
+margin-bottom: 24;
+}
+
+.chef-text p:last-child {
+margin-bottom: 0;
+}
+
 .chef-foto {
     border-radius: 4px 4px 4px 200px;
     box-shadow: -16px 16px 0 0 var(--color-primeri-light), -16px 16px 0 2px var(--color-secondary-dark); 
 }
 
 /* formats section */
+.formats-container {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
 
 .formats-list {
     display: flex;
@@ -299,6 +331,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
     width: 44px;
     height: 44px;
     padding: 0%;
@@ -313,11 +346,41 @@ ul {
 }
 
 /* contact */
+.contact-section {
+    padding-bottom: 96px;
+}
+.contact-container {
+    display: flex;
+    gap: 32px;
+}
 .contact-title {
     margin-bottom: 16px;
 }
+.contact-map {
+    flex-shrink: 0;
+    border-radius: 16px;
+    border: none;
+}
 
 /* footer */
+.footer {
+    padding: 32px 0;
+}
+.footer-container {
+    display: flex;
+    gap: 20px;
+}
+.footer-nav,
+.footer-address {
+    flex-basis: 50%;
+    display: flex;
+    gap: 20px;
+    
+}
+.footer-logo,
+.footer-menu {
+    flex-grow: 1;
+}
 
 .footer {
     background-color: var(--color-primeri-dark);
@@ -325,6 +388,11 @@ ul {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+.address-list,
+.address-info {
+    flex-grow: 1;
 }
 
 .address-link {
