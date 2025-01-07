@@ -62,6 +62,7 @@ h1, h2, h3, h4, h5, h6, p {
     margin-top: 0;
 }
 
+
 a {
     display: inline-block;
 }
@@ -77,11 +78,16 @@ ul {
 }
 
 .visually-hidden {
-    position:absolute;
-    left: 10000px;
-    top: auto;
+    position: absolute;
     width: 1px;
     height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
     overflow: hidden;
 }
 
@@ -524,12 +530,10 @@ margin-bottom: 0;
     position: absolute;
     top: 16px;
     left: 42px;
-}
+   }
 
 .form-input {
     padding: 16px 42px;
-    font-size: 16px ;
-    line-height: 1.17;
     width: 100%;
     border: 1px solid var(--color-secondary-dark);
     border-radius: 8px;
