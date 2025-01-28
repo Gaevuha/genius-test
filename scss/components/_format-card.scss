@@ -1,0 +1,49 @@
+
+.formats-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Елементи вирівнюються внизу картки */
+  height: 444px;
+  width: 100%; /* Заповнення доступного простору в контейнері */
+  max-width: 100%; /* Забезпечує коректне масштабування */
+  padding: 24px;
+  background: linear-gradient(
+    180deg,
+    rgba(49, 38, 26, 0) 55.21%,
+    rgba(49, 38, 26, 0.71) 72.92%,
+    #31261a 100%
+  );
+  border-radius: 16px;
+  box-sizing: border-box; /* Забезпечує врахування padding */
+  transition: transform 0.3s;
+  overflow: hidden;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 16px; /* Зберігає закруглення */
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: var(--color-primeri-light);
+  }
+
+  &__text {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--color-primeri-light);
+    margin-bottom: 0;
+  }
+}

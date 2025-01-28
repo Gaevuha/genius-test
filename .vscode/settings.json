@@ -1,0 +1,21 @@
+{
+    "liveServer.settings.port": 5501
+
+ "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded", // Можливі формати: nested, expanded, compact, compressed
+      "extensionName": ".css", // Назва вихідного файлу
+      "savePath": "/css/" // Вказуємо папку для збереження
+    },
+    {
+      "format": "compressed",
+      "extensionName": ".min.css",
+      "savePath": "/css/" // Для мінімізованого CSS
+    }
+  ],
+  "liveSassCompile.settings.generateMap": true, // Вмикаємо source maps
+  "liveSassCompile.settings.autoprefix": ["> 1%", "last 2 versions"] // Автопрефікси для кросбраузер
+  }
+
+
+ 
